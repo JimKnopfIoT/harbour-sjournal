@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=harbour-sjournal
+Name=SJournal
+Comment=Handwritten notes and sketches
+Exec=harbour-sjournal
+
+[X-Sailjail]
+OrganizationName=org.sjournal
+ApplicationName=sjournal
+# Documents for the notebooks, Pictures/Camera for photo layers, Sharing for export.
+Permissions=Documents;Pictures;Camera;Sharing
