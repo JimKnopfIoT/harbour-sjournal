@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="en">
 <context>
     <name>AboutPage</name>
     <message>
@@ -110,8 +110,9 @@
     <message numerus="yes">
         <location filename="../qml/cover/CoverPage.qml" line="31"/>
         <source>%n page(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n page</numerusform>
+            <numerusform>%n pages</numerusform>
         </translation>
     </message>
     <message>
@@ -327,11 +328,6 @@
 <context>
     <name>LayersPage</name>
     <message>
-        <location filename="../qml/pages/LayersPage.qml" line="36"/>
-        <source>Add layer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../qml/pages/LayersPage.qml" line="19"/>
         <source>Layers</source>
         <translation type="unfinished"></translation>
@@ -352,6 +348,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/LayersPage.qml" line="36"/>
+        <source>Add layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/pages/LayersPage.qml" line="48"/>
         <source>Unlock</source>
         <translation type="unfinished"></translation>
@@ -369,8 +370,9 @@
     <message numerus="yes">
         <location filename="../qml/pages/LayersPage.qml" line="54"/>
         <source>Move %n item(s) here</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Move %n item here</numerusform>
+            <numerusform>Move %n items here</numerusform>
         </translation>
     </message>
     <message>
@@ -442,15 +444,42 @@
 </context>
 <context>
     <name>NoteMenuPage</name>
-    <message>
-        <location filename="../qml/pages/NoteMenuPage.qml" line="64"/>
-        <source>Page %1 of %2</source>
-        <translation type="unfinished"></translation>
+    <message numerus="yes">
+        <location filename="../qml/pages/NoteMenuPage.qml" line="13"/>
+        <source>Copy %n item(s)</source>
+        <translation>
+            <numerusform>Copy %n item</numerusform>
+            <numerusform>Copy %n items</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../qml/pages/NoteMenuPage.qml" line="14"/>
         <source>Copy — mark an area first</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/pages/NoteMenuPage.qml" line="16"/>
+        <source>Cut %n item(s)</source>
+        <translation>
+            <numerusform>Cut %n item</numerusform>
+            <numerusform>Cut %n items</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/pages/NoteMenuPage.qml" line="18"/>
+        <source>Delete %n item(s)</source>
+        <translation>
+            <numerusform>Delete %n item</numerusform>
+            <numerusform>Delete %n items</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/pages/NoteMenuPage.qml" line="21"/>
+        <source>Paste %n item(s)</source>
+        <translation>
+            <numerusform>Paste %n item</numerusform>
+            <numerusform>Paste %n items</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../qml/pages/NoteMenuPage.qml" line="22"/>
@@ -463,47 +492,9 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/NoteMenuPage.qml" line="34"/>
-        <source>Save now</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/NoteMenuPage.qml" line="34"/>
-        <source>Saved</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../qml/pages/NoteMenuPage.qml" line="27"/>
         <source>Trace the selected area</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../qml/pages/NoteMenuPage.qml" line="13"/>
-        <source>Copy %n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../qml/pages/NoteMenuPage.qml" line="16"/>
-        <source>Cut %n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../qml/pages/NoteMenuPage.qml" line="18"/>
-        <source>Delete %n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../qml/pages/NoteMenuPage.qml" line="21"/>
-        <source>Paste %n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
     </message>
     <message>
         <location filename="../qml/pages/NoteMenuPage.qml" line="28"/>
@@ -518,6 +509,16 @@
     <message>
         <location filename="../qml/pages/NoteMenuPage.qml" line="32"/>
         <source>No screenshot to sketch on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/NoteMenuPage.qml" line="34"/>
+        <source>Save now</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/NoteMenuPage.qml" line="34"/>
+        <source>Saved</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -558,6 +559,11 @@
     <message>
         <location filename="../qml/pages/NoteMenuPage.qml" line="42"/>
         <source>Close note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/NoteMenuPage.qml" line="64"/>
+        <source>Page %1 of %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -661,8 +667,9 @@
     <message numerus="yes">
         <location filename="../qml/components/NoteToolbar.qml" line="322"/>
         <source>Thinned to %n node(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Thinned to %n node</numerusform>
+            <numerusform>Thinned to %n nodes</numerusform>
         </translation>
     </message>
     <message>
@@ -1226,8 +1233,9 @@
     <message numerus="yes">
         <location filename="../src/render/canvasitem.cpp" line="542"/>
         <source>%n node(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n node</numerusform>
+            <numerusform>%n nodes</numerusform>
         </translation>
     </message>
 </context>

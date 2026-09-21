@@ -28,9 +28,7 @@ CoverBackground {
         Label {
             visible: app.noteOpen
             width: parent.width
-            text: app.controller.pageCount === 1
-                  ? qsTr("1 page")
-                  : qsTr("%1 pages").arg(app.controller.pageCount)
+            text: qsTr("%n page(s)", "", app.controller.pageCount)
             font.pixelSize: Theme.fontSizeSmall
             color: Theme.secondaryColor
         }

@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+
 Page {
     allowedOrientations: Orientation.All
 
@@ -21,6 +22,22 @@ Page {
                 text: qsTr("Handwritten notes and sketches. Notes are stored as vector "
                            + "strokes in the .xopp format, so the same file opens in "
                            + "Xournal++ on a desktop.")
+            }
+
+            ComboBox {
+                readonly property var codes: ["", "en", "de"]
+
+                label: qsTr("Language")
+                currentIndex: Math.max(0, codes.indexOf(languageSetting.language))
+                description: languageSetting.restartNeeded
+                             ? qsTr("Takes effect the next time SJournal starts.")
+                             : ""
+                menu: ContextMenu {
+                    MenuItem { text: qsTr("System default") }
+                    MenuItem { text: "English" }
+                    MenuItem { text: "Deutsch" }
+                }
+                onCurrentIndexChanged: languageSetting.language = codes[currentIndex]
             }
 
             SectionHeader { text: qsTr("Where notes are kept") }

@@ -4,7 +4,7 @@
 
 Name:       harbour-sjournal
 Summary:    Handwritten notes and sketches for Sailfish OS
-Version:    0.1.0
+Version:    0.1.1
 Release:    1
 # GPLv3 for the application; the vendored potrace tracing core is
 # GPL-2.0-or-later, which combines into GPLv3. See THIRD-PARTY.md.
@@ -69,5 +69,11 @@ desktop-file-install --delete-original \
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 
 %changelog
+* Mon Sep 21 2026 SJournal contributors 0.1.1-1
+- Fix: tapping an image in the image picker did nothing.
+- Fix: images with a transparent background were invisible in the picker.
+- Counts read "1 item", not "1 items"; new layers are named in the app's language.
+- Language can be set to English or German under About.
+
 * Wed Sep 09 2026 SJournal contributors 0.1.0-1
 - First build: .xopp notes, layers, shape recognition, SVG export.

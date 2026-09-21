@@ -2,8 +2,6 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.sjournal 1.0
 
-import "../pages"
-
 Rectangle {
     id: toolbar
 
@@ -321,7 +319,7 @@ Rectangle {
                                 if (toolbar.controller.nodes.busy) {
                                     var left = toolbar.controller.nodes.simplify()
                                     toolbar.showHint(left > 0
-                                                     ? qsTr("Thinned to %1 nodes").arg(left)
+                                                     ? qsTr("Thinned to %n node(s)", "", left)
                                                      : qsTr("Nothing to thin out"))
                                 }
                             } else {
@@ -719,12 +717,7 @@ Rectangle {
 
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            var picker = pageStack.push(imagePicker)
-                            picker.selectedContentChanged.connect(function() {
-                                toolbar.controller.insertImage(picker.selectedContent, true)
-                            })
-                        }
+                        onClicked: pageStack.push(Qt.resolvedUrl("../pages/ImageBrowserPage.qml"))
                     }
                 }
 
@@ -850,11 +843,5 @@ Rectangle {
                 onValueChanged: toolbar.controller.tools.penWidth = value
             }
         }
-    }
-
-    Component {
-        id: imagePicker
-
-        ImageBrowserPage { }
     }
 }

@@ -8,6 +8,7 @@
 #include "app/selectiontransform.h"
 #include "app/toolsettings.h"
 #include "app/notebookmodel.h"
+#include "app/languagesetting.h"
 #include "render/canvasitem.h"
 
 #include <QCoreApplication>
@@ -21,6 +22,7 @@
 
 int main(int argc, char *argv[])
 {
+    xn::LanguageSetting::applySaved();
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     app->setApplicationName(QStringLiteral("harbour-sjournal"));
     app->setOrganizationName(QStringLiteral("harbour-sjournal"));
@@ -44,7 +46,9 @@ int main(int argc, char *argv[])
                                                        "SelectionTransform",
                                                        QStringLiteral("Use DocumentController.transform"));
 
+    xn::LanguageSetting language;
     QScopedPointer<QQuickView> view(SailfishApp::createView());
+    view->rootContext()->setContextProperty(QStringLiteral("languageSetting"), &language);
     view->engine()->addImageProvider(QStringLiteral("notepreview"), new xn::PreviewImageProvider);
     view->setSource(SailfishApp::pathToMainQml());
     view->show();

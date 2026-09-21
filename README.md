@@ -9,6 +9,19 @@ it, straighten a scribble into a clean rectangle, turn a word into outlines and
 fill it with a gradient, then export the page as **SVG** with every layer
 intact, ready for Inkscape.
 
+<p align="center">
+  <img src="screenshots/00-device.jpg" width="360" alt="SJournal on a phone next to a capacitive stylus">
+</p>
+
+| | | |
+|:-:|:-:|:-:|
+| <img src="screenshots/02-trace-selected.png" width="240"> | <img src="screenshots/08-text-to-path.png" width="240"> | <img src="screenshots/07-path-tools.png" width="240"> |
+| A traced sketch, selected as vectors | Text turned into paths and broken apart | Path operations |
+| <img src="screenshots/04-layers.png" width="240"> | <img src="screenshots/05-colour.png" width="240"> | <img src="screenshots/06-text-style.png" width="240"> |
+| Layers | Colour picker with hex entry | Text size, weight and fill |
+| <img src="screenshots/03-outline-view.png" width="240"> | <img src="screenshots/01-text-options.png" width="240"> | <img src="screenshots/09-menu.png" width="240"> |
+| Outline view | Text options | Note menu |
+
 SJournal is written from scratch in C++ and QML with a Silica interface. It is
 not a port of Xournal++ and shares no code with it; what it shares is the file
 format.
@@ -48,6 +61,7 @@ format.
 - Trace a marked part of a photo into editable vector outlines
 - Notebook list with thumbnails, searching titles and text
 - Export: SVG with Inkscape layers, PNG, JPEG, WebP, and vector PDF
+- English and German, switchable under About
 
 ## About the stylus
 

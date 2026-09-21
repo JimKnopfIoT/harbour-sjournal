@@ -1,5 +1,7 @@
 #include "model/page.h"
 
+#include <QCoreApplication>
+
 namespace xn {
 QSizeF Page::a4()
 {
@@ -37,7 +39,7 @@ Layer *Page::addLayer(const QString &name)
 {
     Layer *l = new Layer;
     l->name = name.isEmpty()
-            ? QStringLiteral("Layer %1").arg(layers.size() + 1)
+            ? QCoreApplication::translate("Page", "Layer %1").arg(layers.size() + 1)
             : name;
     layers.append(l);
     return l;
