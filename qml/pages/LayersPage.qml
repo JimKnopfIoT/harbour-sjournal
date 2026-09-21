@@ -51,7 +51,7 @@ Page {
                 MenuItem {
                     text: app.controller.selection.count === 1
                           ? qsTr("Move selection here")
-                          : qsTr("Move %1 objects here").arg(app.controller.selection.count)
+                          : qsTr("Move %n item(s) here", "", app.controller.selection.count)
                     enabled: app.controller.selection.count > 0 && !layerLocked && !isCurrent
                     onClicked: page.layers.moveSelectionHere(index)
                 }

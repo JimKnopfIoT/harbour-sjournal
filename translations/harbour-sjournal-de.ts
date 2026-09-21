@@ -27,6 +27,18 @@
         <source>The screen is a plain capacitive panel with no digitiser, so active pens that rely on one — Microsoft Pen Protocol, Wacom EMR, Apple Pencil — cannot work. A capacitive stylus works, and stroke width comes from speed instead of pressure.</source>
         <translation>Der Bildschirm ist ein gewöhnliches kapazitives Panel ohne Digitizer. Aktive Stifte, die einen brauchen — Microsoft Pen Protocol, Wacom EMR, Apple Pencil — können deshalb nicht funktionieren. Ein kapazitiver Stylus geht, und die Strichstärke kommt aus der Geschwindigkeit statt aus dem Druck.</translation>
     </message>
+    <message>
+        <source>Language</source>
+        <translation>Sprache</translation>
+    </message>
+    <message>
+        <source>Takes effect the next time SJournal starts.</source>
+        <translation>Wirkt beim nächsten Start von SJournal.</translation>
+    </message>
+    <message>
+        <source>System default</source>
+        <translation>Systemsprache</translation>
+    </message>
 </context>
 <context>
     <name>ColorPage</name>
@@ -77,16 +89,15 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <source>1 page</source>
-        <translation>1 Seite</translation>
-    </message>
-    <message>
-        <source>%1 pages</source>
-        <translation>%1 Seiten</translation>
-    </message>
-    <message>
         <source>Unsaved changes</source>
         <translation>Ungesicherte Änderungen</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n page(s)</source>
+        <translation>
+            <numerusform>%n Seite</numerusform>
+            <numerusform>%n Seiten</numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -333,12 +344,15 @@
         <translation>Auswahl hierher verschieben</translation>
     </message>
     <message>
-        <source>Move %1 objects here</source>
-        <translation>%1 Objekte hierher verschieben</translation>
-    </message>
-    <message>
         <source>locked</source>
         <translation>gesperrt</translation>
+    </message>
+    <message numerus="yes">
+        <source>Move %n item(s) here</source>
+        <translation>
+            <numerusform>%n Objekt hierher verschieben</numerusform>
+            <numerusform>%n Objekte hierher verschieben</numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -396,36 +410,16 @@
         <translation>Markierten Bereich nachzeichnen</translation>
     </message>
     <message>
-        <source>Copy %1 items</source>
-        <translation>%1 Objekte kopieren</translation>
-    </message>
-    <message>
         <source>Copy — mark an area first</source>
         <translation>Kopieren — erst etwas markieren</translation>
-    </message>
-    <message>
-        <source>Paste %1 items</source>
-        <translation>%1 Objekte einfügen</translation>
     </message>
     <message>
         <source>Paste — nothing copied</source>
         <translation>Einfügen — nichts kopiert</translation>
     </message>
     <message>
-        <source>Cut %1 items</source>
-        <translation>%1 Objekte ausschneiden</translation>
-    </message>
-    <message>
-        <source>Delete %1 items</source>
-        <translation>%1 Objekte löschen</translation>
-    </message>
-    <message>
         <source>Insert image…</source>
         <translation>Bild einfügen …</translation>
-    </message>
-    <message>
-        <source>Trace — mark an area on a photo first</source>
-        <translation>Nachzeichnen — erst einen Bereich auf einem Foto markieren</translation>
     </message>
     <message>
         <source>Edit</source>
@@ -446,6 +440,38 @@
     <message>
         <source>Save as…</source>
         <translation>Speichern unter…</translation>
+    </message>
+    <message numerus="yes">
+        <source>Copy %n item(s)</source>
+        <translation>
+            <numerusform>%n Objekt kopieren</numerusform>
+            <numerusform>%n Objekte kopieren</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Cut %n item(s)</source>
+        <translation>
+            <numerusform>%n Objekt ausschneiden</numerusform>
+            <numerusform>%n Objekte ausschneiden</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Delete %n item(s)</source>
+        <translation>
+            <numerusform>%n Objekt löschen</numerusform>
+            <numerusform>%n Objekte löschen</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Paste %n item(s)</source>
+        <translation>
+            <numerusform>%n Objekt einfügen</numerusform>
+            <numerusform>%n Objekte einfügen</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Trace — mark part of a photo</source>
+        <translation>Nachzeichnen — Foto-Bereich markieren</translation>
     </message>
 </context>
 <context>
@@ -493,10 +519,6 @@
     <message>
         <source>Eraser</source>
         <translation>Radierer</translation>
-    </message>
-    <message>
-        <source>Thinned to %1 nodes</source>
-        <translation>Auf %1 Knoten ausgedünnt</translation>
     </message>
     <message>
         <source>Nothing to thin out</source>
@@ -574,6 +596,13 @@
         <source>Pick one by one</source>
         <translation>Einzeln antippen</translation>
     </message>
+    <message numerus="yes">
+        <source>Thinned to %n node(s)</source>
+        <translation>
+            <numerusform>Auf %n Knoten ausgedünnt</numerusform>
+            <numerusform>Auf %n Knoten ausgedünnt</numerusform>
+        </translation>
+    </message>
 </context>
 <context>
     <name>NotebooksPage</name>
@@ -640,6 +669,13 @@
     <message>
         <source>Note title</source>
         <translation>Titel der Notiz</translation>
+    </message>
+</context>
+<context>
+    <name>Page</name>
+    <message>
+        <source>Layer %1</source>
+        <translation>Ebene %1</translation>
     </message>
 </context>
 <context>

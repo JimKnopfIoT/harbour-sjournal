@@ -75,7 +75,8 @@ SOURCES += \
     src/app/selectiontransform.cpp \
     src/app/toolsettings.cpp \
     src/app/documentcontroller.cpp \
-    src/app/notebookmodel.cpp
+    src/app/notebookmodel.cpp \
+    src/app/languagesetting.cpp
 
 HEADERS += \
     src/model/element.h \
@@ -114,7 +115,8 @@ HEADERS += \
     src/app/selectiontransform.h \
     src/app/toolsettings.h \
     src/app/documentcontroller.h \
-    src/app/notebookmodel.h
+    src/app/notebookmodel.h \
+    src/app/languagesetting.h
 
 DISTFILES += \
     harbour-sjournal.desktop \
@@ -127,4 +129,5 @@ DISTFILES += \
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
-TRANSLATIONS += translations/harbour-sjournal-de.ts
+TRANSLATIONS += translations/harbour-sjournal-de.ts \
+    translations/harbour-sjournal-en.ts

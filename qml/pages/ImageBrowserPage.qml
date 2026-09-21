@@ -6,8 +6,6 @@ Page {
     id: page
     allowedOrientations: Orientation.All
 
-    signal imageSelected(string url)
-
     property string folder: app.controller.picturesDirectory()
     readonly property string homeDir: app.controller.homeDirectory()
 
@@ -70,10 +68,8 @@ Page {
             onClicked: {
                 if (fileIsDir)
                     page.folder = filePath
-                else {
-                    page.imageSelected("file://" + filePath)
+                else if (app.controller.insertImage("file://" + filePath, true))
                     pageStack.pop()
-                }
             }
 
             Rectangle {
@@ -81,7 +77,7 @@ Page {
                     fill: parent
                     margins: Theme.paddingSmall
                 }
-                color: fileIsDir ? Theme.rgba(Theme.primaryColor, 0.1) : "black"
+                color: fileIsDir ? Theme.rgba(Theme.primaryColor, 0.1) : "white"
                 radius: Theme.paddingSmall
 
                 Image {

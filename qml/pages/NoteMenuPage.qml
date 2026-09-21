@@ -10,22 +10,22 @@ Page {
         switch (action) {
         case "copy":
             return app.controller.selection.count > 0
-                    ? qsTr("Copy %1 items").arg(app.controller.selection.count)
+                    ? qsTr("Copy %n item(s)", "", app.controller.selection.count)
                     : qsTr("Copy — mark an area first")
         case "cut":
-            return qsTr("Cut %1 items").arg(app.controller.selection.count)
+            return qsTr("Cut %n item(s)", "", app.controller.selection.count)
         case "delete":
-            return qsTr("Delete %1 items").arg(app.controller.selection.count)
+            return qsTr("Delete %n item(s)", "", app.controller.selection.count)
         case "paste":
             return app.controller.selection.clipboardCount > 0
-                    ? qsTr("Paste %1 items").arg(app.controller.selection.clipboardCount)
+                    ? qsTr("Paste %n item(s)", "", app.controller.selection.clipboardCount)
                     : qsTr("Paste — nothing copied")
         case "openimage":
             return qsTr("Insert image…")
         case "trace":
             return app.controller.selection.hasImage
                     ? qsTr("Trace the selected area")
-                    : qsTr("Trace — mark an area on a photo first")
+                    : qsTr("Trace — mark part of a photo")
         case "screenshot":
             return app.controller.latestScreenshotName().length > 0
                     ? qsTr("Sketch on last screenshot")
@@ -130,13 +130,9 @@ Page {
                     app.controller.selection.remove()
                     pageStack.pop()
                     break
-                case "openimage": {
-                    var picker = pageStack.replace(imagePicker)
-                    picker.imageSelected.connect(function(url) {
-                        app.controller.insertImage(url, true)
-                    })
+                case "openimage":
+                    pageStack.replace(Qt.resolvedUrl("ImageBrowserPage.qml"))
                     break
-                }
                 case "screenshot":
                     if (app.controller.insertLatestScreenshot())
                         pageStack.pop()
@@ -194,11 +190,5 @@ Page {
         }
 
         VerticalScrollDecorator { }
-    }
-
-    Component {
-        id: imagePicker
-
-        ImageBrowserPage { }
     }
 }

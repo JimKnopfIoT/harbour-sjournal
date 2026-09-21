@@ -4,32 +4,47 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="15"/>
+        <location filename="../qml/pages/AboutPage.qml" line="16"/>
         <source>SJournal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="21"/>
+        <location filename="../qml/pages/AboutPage.qml" line="22"/>
         <source>Handwritten notes and sketches. Notes are stored as vector strokes in the .xopp format, so the same file opens in Xournal++ on a desktop.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="26"/>
+        <location filename="../qml/pages/AboutPage.qml" line="30"/>
+        <source>Language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="33"/>
+        <source>Takes effect the next time SJournal starts.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="36"/>
+        <source>System default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="43"/>
         <source>Where notes are kept</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="34"/>
+        <location filename="../qml/pages/AboutPage.qml" line="51"/>
         <source>Documents/SJournal — plain .xopp files, visible to the file manager and to any sync tool you already run.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="38"/>
+        <location filename="../qml/pages/AboutPage.qml" line="55"/>
         <source>Stylus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="46"/>
+        <location filename="../qml/pages/AboutPage.qml" line="63"/>
         <source>The screen is a plain capacitive panel with no digitiser, so active pens that rely on one — Microsoft Pen Protocol, Wacom EMR, Apple Pencil — cannot work. A capacitive stylus works, and stroke width comes from speed instead of pressure.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -92,18 +107,15 @@
 </context>
 <context>
     <name>CoverPage</name>
-    <message>
-        <location filename="../qml/cover/CoverPage.qml" line="32"/>
-        <source>1 page</source>
-        <translation type="unfinished"></translation>
+    <message numerus="yes">
+        <location filename="../qml/cover/CoverPage.qml" line="31"/>
+        <source>%n page(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location filename="../qml/cover/CoverPage.qml" line="33"/>
-        <source>%1 pages</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/cover/CoverPage.qml" line="41"/>
+        <location filename="../qml/cover/CoverPage.qml" line="39"/>
         <source>Unsaved changes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -272,48 +284,53 @@
 <context>
     <name>ImageBrowserPage</name>
     <message>
-        <location filename="../qml/pages/ImageBrowserPage.qml" line="40"/>
+        <location filename="../qml/pages/ImageBrowserPage.qml" line="38"/>
         <source>Documents</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ImageBrowserPage.qml" line="44"/>
+        <location filename="../qml/pages/ImageBrowserPage.qml" line="42"/>
         <source>Downloads</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ImageBrowserPage.qml" line="48"/>
+        <location filename="../qml/pages/ImageBrowserPage.qml" line="46"/>
         <source>Screenshots</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ImageBrowserPage.qml" line="52"/>
+        <location filename="../qml/pages/ImageBrowserPage.qml" line="50"/>
         <source>Pictures</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ImageBrowserPage.qml" line="56"/>
+        <location filename="../qml/pages/ImageBrowserPage.qml" line="54"/>
         <source>Up one level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ImageBrowserPage.qml" line="62"/>
+        <location filename="../qml/pages/ImageBrowserPage.qml" line="60"/>
         <source>Pick an image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ImageBrowserPage.qml" line="115"/>
+        <location filename="../qml/pages/ImageBrowserPage.qml" line="111"/>
         <source>Nothing here</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ImageBrowserPage.qml" line="116"/>
+        <location filename="../qml/pages/ImageBrowserPage.qml" line="112"/>
         <source>Pull down to jump to Pictures, Screenshots or Downloads</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>LayersPage</name>
+    <message>
+        <location filename="../qml/pages/LayersPage.qml" line="36"/>
+        <source>Add layer</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <location filename="../qml/pages/LayersPage.qml" line="19"/>
         <source>Layers</source>
@@ -335,11 +352,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/LayersPage.qml" line="36"/>
-        <source>Add layer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../qml/pages/LayersPage.qml" line="48"/>
         <source>Unlock</source>
         <translation type="unfinished"></translation>
@@ -354,10 +366,12 @@
         <source>Move selection here</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../qml/pages/LayersPage.qml" line="54"/>
-        <source>Move %1 objects here</source>
-        <translation type="unfinished"></translation>
+        <source>Move %n item(s) here</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../qml/pages/LayersPage.qml" line="59"/>
@@ -429,28 +443,13 @@
 <context>
     <name>NoteMenuPage</name>
     <message>
-        <location filename="../qml/pages/NoteMenuPage.qml" line="13"/>
-        <source>Copy %1 items</source>
+        <location filename="../qml/pages/NoteMenuPage.qml" line="64"/>
+        <source>Page %1 of %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/NoteMenuPage.qml" line="14"/>
         <source>Copy — mark an area first</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/NoteMenuPage.qml" line="16"/>
-        <source>Cut %1 items</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/NoteMenuPage.qml" line="18"/>
-        <source>Delete %1 items</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/NoteMenuPage.qml" line="21"/>
-        <source>Paste %1 items</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -464,13 +463,51 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/NoteMenuPage.qml" line="34"/>
+        <source>Save now</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/NoteMenuPage.qml" line="34"/>
+        <source>Saved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/pages/NoteMenuPage.qml" line="27"/>
         <source>Trace the selected area</source>
         <translation type="unfinished"></translation>
     </message>
+    <message numerus="yes">
+        <location filename="../qml/pages/NoteMenuPage.qml" line="13"/>
+        <source>Copy %n item(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/pages/NoteMenuPage.qml" line="16"/>
+        <source>Cut %n item(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/pages/NoteMenuPage.qml" line="18"/>
+        <source>Delete %n item(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/pages/NoteMenuPage.qml" line="21"/>
+        <source>Paste %n item(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
         <location filename="../qml/pages/NoteMenuPage.qml" line="28"/>
-        <source>Trace — mark an area on a photo first</source>
+        <source>Trace — mark part of a photo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -481,16 +518,6 @@
     <message>
         <location filename="../qml/pages/NoteMenuPage.qml" line="32"/>
         <source>No screenshot to sketch on</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/NoteMenuPage.qml" line="34"/>
-        <source>Save now</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/NoteMenuPage.qml" line="34"/>
-        <source>Saved</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -534,11 +561,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/NoteMenuPage.qml" line="64"/>
-        <source>Page %1 of %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../qml/pages/NoteMenuPage.qml" line="89"/>
         <source>Edit</source>
         <translation type="unfinished"></translation>
@@ -562,157 +584,159 @@
 <context>
     <name>NoteToolbar</name>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="19"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="17"/>
         <source>Pen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="20"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="18"/>
         <source>Bezier</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="21"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="19"/>
         <source>Brush</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="22"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="20"/>
         <source>Marker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="51"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="49"/>
         <source>Rectangle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="52"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="50"/>
         <source>Lasso</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="53"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="51"/>
         <source>Pick one by one</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="68"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="66"/>
         <source>Select paths</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="69"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="67"/>
         <source>Select nodes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="85"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="83"/>
         <source>Move</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="86"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="84"/>
         <source>Resize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="87"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="85"/>
         <source>Flip horizontally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="88"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="86"/>
         <source>Flip vertically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="241"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="239"/>
         <source>Eraser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="242"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="240"/>
         <source>Text</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="324"/>
-        <source>Thinned to %1 nodes</source>
-        <translation type="unfinished"></translation>
+    <message numerus="yes">
+        <location filename="../qml/components/NoteToolbar.qml" line="322"/>
+        <source>Thinned to %n node(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="325"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="323"/>
         <source>Nothing to thin out</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="372"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="370"/>
         <source>Aspect locked</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="372"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="370"/>
         <source>Aspect free</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="403"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="401"/>
         <source>Magnifier</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="407"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="405"/>
         <source>Zoom reset to 100 %</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="440"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="438"/>
         <source>Snap to points on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="440"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="438"/>
         <source>Snap to points off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="473"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="471"/>
         <source>Size grid on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="473"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="471"/>
         <source>Size grid off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="507"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="505"/>
         <source>Shape recognition on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="507"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="505"/>
         <source>Shape recognition off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="538"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="536"/>
         <source>Pin page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="575"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="573"/>
         <source>Layers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="575"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="573"/>
         <source>More</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="849"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="842"/>
         <source>%1 pt</source>
         <translation type="unfinished"></translation>
     </message>
@@ -800,6 +824,15 @@
         <location filename="../qml/pages/NotebooksPage.qml" line="189"/>
         <location filename="../qml/pages/NotebooksPage.qml" line="217"/>
         <source>Note title</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page</name>
+    <message>
+        <location filename="../src/io/xoppreader.cpp" line="194"/>
+        <location filename="../src/model/page.cpp" line="42"/>
+        <source>Layer %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

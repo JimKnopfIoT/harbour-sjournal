@@ -8,6 +8,7 @@
 #include "model/textitem.h"
 
 #include <QColor>
+#include <QCoreApplication>
 #include <QFileInfo>
 #include <QStringList>
 #include <QXmlStreamReader>
@@ -190,7 +191,7 @@ void XoppReader::readPage(QXmlStreamReader &xml, Page *page)
             const QXmlStreamAttributes a = xml.attributes();
             layer->name = a.value(QStringLiteral("name")).toString();
             if (layer->name.isEmpty())
-                layer->name = QStringLiteral("Layer %1").arg(page->layers.size() + 1);
+                layer->name = QCoreApplication::translate("Page", "Layer %1").arg(page->layers.size() + 1);
             if (a.hasAttribute(QStringLiteral("visible")))
                 layer->visible = a.value(QStringLiteral("visible")).toString() != QLatin1String("false");
             layer->locked = a.value(QStringLiteral("locked")).toString() == QLatin1String("true");
