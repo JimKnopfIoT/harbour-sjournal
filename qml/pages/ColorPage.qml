@@ -7,6 +7,7 @@ Dialog {
     id: page
 
     property var style                      // controller.style
+    property var tools                      // controller.tools, for what gets drawn next
     property color strokeColor: "#000000"
     property color fillColour: "#1a72d0"
     property int alpha: 255
@@ -19,6 +20,7 @@ Dialog {
     property int activeStop: 0
 
     readonly property bool gradientOn: stops.length >= 2
+    readonly property bool gradientUsable: fillable && !tools
 
     canAccept: true
 
@@ -143,7 +145,7 @@ Dialog {
 
             Label {
                 x: Theme.horizontalPageMargin
-                visible: page.target === "fill" && page.fillable
+                visible: page.target === "fill" && page.gradientUsable
                 text: qsTr("Gradient")
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.secondaryHighlightColor
@@ -153,7 +155,7 @@ Dialog {
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2 * Theme.horizontalPageMargin
                 spacing: Theme.paddingSmall
-                visible: page.target === "fill" && page.fillable
+                visible: page.target === "fill" && page.gradientUsable
 
                 Repeater {
                     model: [ { count: 0, name: qsTr("Off") }, { count: 2, name: "2" },
@@ -281,6 +283,17 @@ Dialog {
     }
 
     onAccepted: {
+        if (tools) {
+            if (target === "stroke") {
+                tools.color = strokeColor
+                tools.penWidth = strokeWidth
+            } else {
+                tools.fillColor = fillColour
+                tools.fillAlpha = alpha
+                tools.fillEnabled = true
+            }
+            return
+        }
         if (!style)
             return
         if (target === "stroke") {

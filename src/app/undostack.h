@@ -80,6 +80,7 @@ private:
 
 struct TextFormat
 {
+    QString family;
     qreal size;
     bool bold;
     bool italic;

@@ -170,6 +170,18 @@ Canvas {
             ctx.beginPath()
             ctx.arc(0.68, 0.34, 0.07, 0, 2 * Math.PI)
             ctx.stroke()
+        } else if (kind === "penset") {
+            var knobs = [0.62, 0.34, 0.54]
+            for (var r = 0; r < 3; ++r) {
+                var ry = 0.24 + r * 0.26
+                ctx.beginPath()
+                ctx.moveTo(0.12, ry)
+                ctx.lineTo(0.88, ry)
+                ctx.stroke()
+                ctx.beginPath()
+                ctx.arc(knobs[r], ry, 0.08, 0, 2 * Math.PI)
+                ctx.fill()
+            }
         } else if (kind === "shape") {
             ctx.beginPath()
             ctx.rect(0.10, 0.16, 0.42, 0.42)

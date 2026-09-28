@@ -180,6 +180,7 @@ Item {
                     anchors.centerIn: parent
                     text: "A"
                     color: Theme.highlightColor
+                    font.family: bar.controller.tools.fontFamily
                     font.pixelSize: Theme.fontSizeMedium
                     font.bold: bar.controller.tools.fontBold
                     font.italic: bar.controller.tools.fontItalic
@@ -571,6 +572,60 @@ Item {
             anchors.centerIn: parent
             width: parent.width - Theme.paddingLarge
             spacing: Theme.paddingMedium
+
+            Label {
+                text: qsTr("Font")
+                font.pixelSize: Theme.fontSizeExtraSmall
+                color: Theme.secondaryHighlightColor
+            }
+
+            ListView {
+                id: familyList
+                width: parent.width
+                height: Theme.itemSizeExtraSmall * 3
+                clip: true
+                model: bar.controller.tools.fontFamilies
+                currentIndex: model.indexOf(bar.controller.tools.fontFamily)
+                highlightFollowsCurrentItem: false
+                onVisibleChanged: if (visible) positionViewAtIndex(Math.max(0, currentIndex),
+                                                                   ListView.Center)
+
+                delegate: Item {
+                    width: familyList.width
+                    height: Theme.itemSizeExtraSmall
+
+                    readonly property bool picked: modelData === bar.controller.tools.fontFamily
+
+                    Rectangle {
+                        anchors.fill: parent
+                        radius: Theme.paddingSmall / 2
+                        color: parent.picked ? Theme.rgba(Theme.highlightColor, 0.35)
+                                             : "transparent"
+                    }
+
+                    Label {
+                        anchors {
+                            left: parent.left
+                            right: parent.right
+                            leftMargin: Theme.paddingSmall
+                            rightMargin: Theme.paddingSmall
+                            verticalCenter: parent.verticalCenter
+                        }
+                        text: modelData
+                        font.family: modelData
+                        font.pixelSize: Theme.fontSizeSmall
+                        truncationMode: TruncationMode.Fade
+                        color: parent.picked ? Theme.highlightColor : Theme.primaryColor
+                    }
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: bar.controller.tools.fontFamily = modelData
+                    }
+                }
+
+                VerticalScrollDecorator { flickable: familyList }
+            }
 
             Row {
                 width: parent.width

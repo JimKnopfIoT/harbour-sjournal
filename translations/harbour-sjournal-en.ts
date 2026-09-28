@@ -52,42 +52,42 @@
 <context>
     <name>ColorPage</name>
     <message>
-        <location filename="../qml/pages/ColorPage.qml" line="67"/>
+        <location filename="../qml/pages/ColorPage.qml" line="69"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ColorPage.qml" line="75"/>
+        <location filename="../qml/pages/ColorPage.qml" line="77"/>
         <source>Outline</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ColorPage.qml" line="76"/>
+        <location filename="../qml/pages/ColorPage.qml" line="78"/>
         <source>Area</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ColorPage.qml" line="126"/>
+        <location filename="../qml/pages/ColorPage.qml" line="128"/>
         <source>Transparency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ColorPage.qml" line="139"/>
+        <location filename="../qml/pages/ColorPage.qml" line="141"/>
         <source>Line width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ColorPage.qml" line="147"/>
+        <location filename="../qml/pages/ColorPage.qml" line="149"/>
         <source>Gradient</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ColorPage.qml" line="159"/>
+        <location filename="../qml/pages/ColorPage.qml" line="161"/>
         <source>Off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ColorPage.qml" line="231"/>
+        <location filename="../qml/pages/ColorPage.qml" line="233"/>
         <source>Gradient angle</source>
         <translation type="unfinished"></translation>
     </message>
@@ -655,17 +655,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="239"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="131"/>
+        <source>Colour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/NoteToolbar.qml" line="132"/>
+        <source>Insert image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/NoteToolbar.qml" line="133"/>
+        <source>Pen settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/NoteToolbar.qml" line="271"/>
         <source>Eraser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="240"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="272"/>
         <source>Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/NoteToolbar.qml" line="322"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="354"/>
         <source>Thinned to %n node(s)</source>
         <translation>
             <numerusform>Thinned to %n node</numerusform>
@@ -673,77 +688,77 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="323"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="355"/>
         <source>Nothing to thin out</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="370"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="402"/>
         <source>Aspect locked</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="370"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="402"/>
         <source>Aspect free</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="401"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="433"/>
         <source>Magnifier</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="405"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="437"/>
         <source>Zoom reset to 100 %</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="438"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="470"/>
         <source>Snap to points on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="438"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="470"/>
         <source>Snap to points off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="471"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="503"/>
         <source>Size grid on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="471"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="503"/>
         <source>Size grid off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="505"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="537"/>
         <source>Shape recognition on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="505"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="537"/>
         <source>Shape recognition off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="536"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="134"/>
         <source>Pin page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="573"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="135"/>
         <source>Layers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="573"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="136"/>
         <source>More</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NoteToolbar.qml" line="842"/>
+        <location filename="../qml/components/NoteToolbar.qml" line="791"/>
         <source>%1 pt</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1065,48 +1080,53 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/TopBar.qml" line="208"/>
-        <location filename="../qml/components/TopBar.qml" line="732"/>
+        <location filename="../qml/components/TopBar.qml" line="209"/>
+        <location filename="../qml/components/TopBar.qml" line="787"/>
         <source>Outline</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/TopBar.qml" line="226"/>
+        <location filename="../qml/components/TopBar.qml" line="227"/>
         <source>1 selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/TopBar.qml" line="227"/>
+        <location filename="../qml/components/TopBar.qml" line="228"/>
         <source>%1 selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/TopBar.qml" line="228"/>
+        <location filename="../qml/components/TopBar.qml" line="229"/>
         <source>%1 copied</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/TopBar.qml" line="580"/>
+        <location filename="../qml/components/TopBar.qml" line="577"/>
+        <source>Font</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/TopBar.qml" line="635"/>
         <source>Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/TopBar.qml" line="668"/>
+        <location filename="../qml/components/TopBar.qml" line="723"/>
         <source>Weight</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/TopBar.qml" line="722"/>
+        <location filename="../qml/components/TopBar.qml" line="777"/>
         <source>Fill</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/TopBar.qml" line="731"/>
+        <location filename="../qml/components/TopBar.qml" line="786"/>
         <source>Filled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/TopBar.qml" line="733"/>
+        <location filename="../qml/components/TopBar.qml" line="788"/>
         <source>Inline</source>
         <translation type="unfinished"></translation>
     </message>

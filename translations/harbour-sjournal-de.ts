@@ -603,6 +603,18 @@
             <numerusform>Auf %n Knoten ausgedünnt</numerusform>
         </translation>
     </message>
+    <message>
+        <source>Colour</source>
+        <translation>Farbe</translation>
+    </message>
+    <message>
+        <source>Insert image</source>
+        <translation>Bild einfügen</translation>
+    </message>
+    <message>
+        <source>Pen settings</source>
+        <translation>Stifteinstellungen</translation>
+    </message>
 </context>
 <context>
     <name>NotebooksPage</name>
@@ -892,6 +904,10 @@
     <message>
         <source>Subtract</source>
         <translation>Abziehen</translation>
+    </message>
+    <message>
+        <source>Font</source>
+        <translation>Schrift</translation>
     </message>
 </context>
 <context>
