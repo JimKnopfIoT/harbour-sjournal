@@ -176,6 +176,7 @@ void ChangeTextCommand::redo()
 
 static void applyFormat(TextItem *item, const TextFormat &f)
 {
+    item->fontName = f.family;
     item->fontSize = f.size;
     item->bold = f.bold;
     item->italic = f.italic;
@@ -185,8 +186,8 @@ static void applyFormat(TextItem *item, const TextFormat &f)
 
 bool operator==(const TextFormat &a, const TextFormat &b)
 {
-    return qFuzzyCompare(a.size, b.size) && a.bold == b.bold && a.italic == b.italic
-            && a.underline == b.underline && a.style == b.style;
+    return a.family == b.family && qFuzzyCompare(a.size, b.size) && a.bold == b.bold
+            && a.italic == b.italic && a.underline == b.underline && a.style == b.style;
 }
 
 ChangeTextFormatCommand::ChangeTextFormatCommand(const QVector<TextItem *> &items,

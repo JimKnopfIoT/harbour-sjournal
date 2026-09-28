@@ -4,6 +4,7 @@
 #include <QColor>
 #include <QObject>
 #include <QString>
+#include <QStringList>
 
 namespace xn {
 class ToolSettings : public QObject
@@ -15,6 +16,8 @@ class ToolSettings : public QObject
     Q_PROPERTY(qreal penWidth READ penWidth WRITE setPenWidth NOTIFY penWidthChanged)
     Q_PROPERTY(bool dynamicWidth READ dynamicWidth WRITE setDynamicWidth NOTIFY dynamicWidthChanged)
     Q_PROPERTY(qreal fontSize READ fontSize WRITE setFontSize NOTIFY fontSizeChanged)
+    Q_PROPERTY(QString fontFamily READ fontFamily WRITE setFontFamily NOTIFY fontFormChanged)
+    Q_PROPERTY(QStringList fontFamilies READ fontFamilies CONSTANT)
     Q_PROPERTY(bool fontBold READ fontBold WRITE setFontBold NOTIFY fontFormChanged)
     Q_PROPERTY(bool fontItalic READ fontItalic WRITE setFontItalic NOTIFY fontFormChanged)
     Q_PROPERTY(bool fontUnderline READ fontUnderline WRITE setFontUnderline NOTIFY fontFormChanged)
@@ -64,6 +67,9 @@ public:
     void setDynamicWidth(bool on);
     qreal fontSize() const { return m_fontSize; }
     void setFontSize(qreal size);
+    QString fontFamily() const { return m_fontFamily; }
+    void setFontFamily(const QString &family);
+    QStringList fontFamilies() const;
 
     bool fontBold() const { return m_fontBold; }
     void setFontBold(bool on);
@@ -140,6 +146,7 @@ private:
     qreal m_penWidth;
     bool m_dynamicWidth;
     qreal m_fontSize;
+    QString m_fontFamily;
     bool m_fontBold;
     bool m_fontItalic;
     bool m_fontUnderline;

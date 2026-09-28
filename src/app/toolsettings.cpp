@@ -3,6 +3,8 @@
 #include "model/stroke.h"
 #include "tools/shapefactory.h"
 
+#include <QFontDatabase>
+
 namespace xn {
 ToolSettings::ToolSettings(QObject *parent)
     : QObject(parent)
@@ -11,6 +13,7 @@ ToolSettings::ToolSettings(QObject *parent)
     , m_penWidth(2.4)
     , m_dynamicWidth(true)
     , m_fontSize(12)
+    , m_fontFamily(QStringLiteral("Sans"))
     , m_fontBold(false)
     , m_fontItalic(false)
     , m_fontUnderline(false)
@@ -72,6 +75,28 @@ void ToolSettings::setFontSize(qreal size)
         return;
     m_fontSize = clamped;
     Q_EMIT fontSizeChanged();
+}
+
+void ToolSettings::setFontFamily(const QString &family)
+{
+    const QString name = family.trimmed().isEmpty() ? QStringLiteral("Sans") : family.trimmed();
+    if (m_fontFamily == name)
+        return;
+    m_fontFamily = name;
+    Q_EMIT fontFormChanged();
+}
+
+QStringList ToolSettings::fontFamilies() const
+{
+    QStringList families;
+    families << QStringLiteral("Sans") << QStringLiteral("Serif") << QStringLiteral("Monospace");
+    const QStringList installed = QFontDatabase().families(QFontDatabase::Latin);
+    for (int i = 0; i < installed.size(); ++i) {
+        const QString &name = installed.at(i);
+        if (!families.contains(name, Qt::CaseInsensitive))
+            families << name;
+    }
+    return families;
 }
 
 void ToolSettings::setFontBold(bool on)

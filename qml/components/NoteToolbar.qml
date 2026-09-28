@@ -127,11 +127,43 @@ Rectangle {
             lastPenKind = activePenKind
     }
 
-    readonly property var palette: [
-        "#000000", "#e12d2d", "#ef8a17", "#f2c40e",
-        "#2e9e3e", "#1a72d0", "#7d3fbf", "#ffffff",
-        "#8d5524", "#00a0a0", "#e05c9e", "#7a7a7a"
+    readonly property var menuSlots: [
+        { kind: "swatch", action: "colour", name: qsTr("Colour") },
+        { kind: "photo",  action: "photo",  name: qsTr("Insert image") },
+        { kind: "penset", action: "pen",    name: qsTr("Pen settings") },
+        { kind: "pin",    action: "pin",    name: qsTr("Pin page") },
+        { kind: "layers", action: "layers", name: qsTr("Layers") },
+        { kind: "menu",   action: "menu",   name: qsTr("More") }
     ]
+
+    function openPenColour() {
+        var t = controller.tools
+        pageStack.push(Qt.resolvedUrl("../pages/ColorPage.qml"), {
+            tools: t,
+            strokeColor: t.color,
+            fillColour: t.fillColor,
+            alpha: t.fillAlpha,
+            strokeWidth: t.penWidth
+        })
+    }
+
+    function runMenuSlot(slot) {
+        openPopup = ""
+        if (slot.action === "colour") {
+            openPenColour()
+        } else if (slot.action === "photo") {
+            pageStack.push(Qt.resolvedUrl("../pages/ImageBrowserPage.qml"))
+        } else if (slot.action === "pen") {
+            pageStack.push(Qt.resolvedUrl("../pages/PenPage.qml"))
+        } else if (slot.action === "pin") {
+            pinnedToggled()
+            showHint(slot.name)
+        } else if (slot.action === "layers") {
+            pageStack.push(Qt.resolvedUrl("../pages/LayersPage.qml"))
+        } else {
+            pageStack.push(Qt.resolvedUrl("../pages/NoteMenuPage.qml"))
+        }
+    }
 
     implicitHeight: content.height + Theme.paddingMedium * 2
     color: Theme.rgba(Theme.highlightDimmerColor, 0.92)
@@ -154,7 +186,7 @@ Rectangle {
         spacing: Theme.paddingSmall
 
         readonly property real topSlot: width / 10
-        readonly property real bottomSlot: width / 10
+        readonly property real bottomSlot: width / 11
 
         Flickable {
             width: parent.width
@@ -506,74 +538,6 @@ Rectangle {
                         }
                     }
                 }
-
-                Item {
-                    width: content.topSlot
-                    height: topRow.height
-
-                    Rectangle {
-                        anchors.centerIn: parent
-                        width: Theme.iconSizeMedium + Theme.paddingSmall
-                        height: width
-                        radius: width / 2
-                        color: toolbar.pinned ? Theme.rgba(Theme.highlightColor, 0.35)
-                                              : "transparent"
-                    }
-
-                    ToolGlyph {
-                        anchors.centerIn: parent
-                        width: Theme.iconSizeMedium
-                        height: width
-                        kind: "pin"
-                        color: toolbar.pinned ? Theme.highlightColor
-                                              : Theme.rgba(Theme.primaryColor, 0.5)
-                    }
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            toolbar.pinnedToggled()
-                            toolbar.showHint(qsTr("Pin page"))
-                        }
-                    }
-                }
-
-                Repeater {
-                    model: [
-                        { kind: "layers", action: "layers" },
-                        { kind: "menu",   action: "menu" }
-                    ]
-
-                    delegate: Item {
-                        width: content.topSlot
-                        height: topRow.height
-
-                        property bool actionEnabled: true
-
-                        ToolGlyph {
-                            anchors.centerIn: parent
-                            width: Theme.iconSizeMedium
-                            height: width
-                            kind: modelData.kind
-                            color: parent.actionEnabled
-                                   ? Theme.primaryColor
-                                   : Theme.rgba(Theme.primaryColor, 0.3)
-                        }
-
-                        MouseArea {
-                            anchors.fill: parent
-                            enabled: parent.actionEnabled
-                            onClicked: {
-                                if (modelData.action === "layers")
-                                    pageStack.push(Qt.resolvedUrl("../pages/LayersPage.qml"))
-                                else
-                                    pageStack.push(Qt.resolvedUrl("../pages/NoteMenuPage.qml"))
-                            }
-                            onPressAndHold: toolbar.showHint(
-                                    modelData.action === "layers" ? qsTr("Layers") : qsTr("More"))
-                        }
-                    }
-                }
             }
         }
 
@@ -673,54 +637,39 @@ Rectangle {
                 }
 
                 Repeater {
-                    model: toolbar.palette
+                    model: toolbar.menuSlots
 
                     delegate: Item {
                         width: content.bottomSlot
                         height: bottomRow.height
 
-                        property bool selected: Qt.colorEqual(toolbar.controller.tools.color, modelData)
+                        readonly property bool on: modelData.action === "pin" && toolbar.pinned
 
                         Rectangle {
                             anchors.centerIn: parent
-                            width: parent.selected ? Theme.iconSizeSmall
-                                                   : Theme.iconSizeSmall * 0.72
+                            width: Theme.iconSizeSmall + Theme.paddingSmall
                             height: width
                             radius: width / 2
-                            color: modelData
-                            border.width: parent.selected ? 2 : 1
-                            border.color: parent.selected
-                                          ? Theme.highlightColor
-                                          : Theme.rgba(Theme.primaryColor, 0.35)
+                            color: parent.on ? Theme.rgba(Theme.highlightColor, 0.35)
+                                             : "transparent"
+                        }
 
-                            Behavior on width { NumberAnimation { duration: 100 } }
+                        ToolGlyph {
+                            anchors.centerIn: parent
+                            width: Theme.iconSizeSmall
+                            height: width
+                            kind: modelData.kind
+                            color: parent.on ? Theme.highlightColor
+                                             : Theme.rgba(Theme.primaryColor, 0.75)
                         }
 
                         MouseArea {
                             anchors.fill: parent
-                            onClicked: toolbar.controller.tools.color = modelData
+                            onClicked: toolbar.runMenuSlot(modelData)
+                            onPressAndHold: toolbar.showHint(modelData.name)
                         }
                     }
                 }
-
-                Item {
-                    width: content.bottomSlot
-                    height: bottomRow.height
-
-                    ToolGlyph {
-                        anchors.centerIn: parent
-                        width: Theme.iconSizeSmall
-                        height: width
-                        kind: "photo"
-                        color: Theme.primaryColor
-                    }
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: pageStack.push(Qt.resolvedUrl("../pages/ImageBrowserPage.qml"))
-                    }
-                }
-
             }
         }
     }

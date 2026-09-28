@@ -596,6 +596,7 @@ void DocumentController::commitText(const QString &text)
         TextItem *t = new TextItem;
         t->text = text;
         t->pos = m_textPos;
+        t->fontName = m_tools->fontFamily();
         t->fontSize = m_tools->fontSize();
         t->color = m_tools->color();
         t->bold = m_tools->fontBold();
@@ -619,6 +620,7 @@ void DocumentController::commitText(const QString &text)
 static TextFormat formatOf(const TextItem *t)
 {
     TextFormat f;
+    f.family = t->fontName;
     f.size = t->fontSize;
     f.bold = t->bold;
     f.italic = t->italic;
@@ -648,6 +650,7 @@ void DocumentController::applyTextFormatToSelection()
         return;
 
     TextFormat after;
+    after.family = m_tools->fontFamily();
     after.size = m_tools->fontSize();
     after.bold = m_tools->fontBold();
     after.italic = m_tools->fontItalic();
@@ -680,6 +683,7 @@ void DocumentController::syncTextFormatFromSelection()
     const TextFormat f = formatOf(items.first());
 
     m_syncingTextFormat = true;
+    m_tools->setFontFamily(f.family);
     m_tools->setFontSize(f.size);
     m_tools->setFontBold(f.bold);
     m_tools->setFontItalic(f.italic);

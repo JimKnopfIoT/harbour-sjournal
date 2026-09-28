@@ -4,7 +4,7 @@
 
 Name:       harbour-sjournal
 Summary:    Handwritten notes and sketches for Sailfish OS
-Version:    0.1.1
+Version:    0.1.2
 Release:    1
 # GPLv3 for the application; the vendored potrace tracing core is
 # GPL-2.0-or-later, which combines into GPLv3. See THIRD-PARTY.md.
@@ -69,6 +69,11 @@ desktop-file-install --delete-original \
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 
 %changelog
+* Mon Sep 28 2026 SJournal contributors 0.1.2-1
+- Text can be set in any installed font; the font menu lists them in their own face.
+- The colour dots are gone; the colour button opens the RGB picker for the pen.
+- Pen settings, pin, layers and the menu moved to the bottom toolbar.
+
 * Mon Sep 21 2026 SJournal contributors 0.1.1-1
 - Fix: tapping an image in the image picker did nothing.
 - Fix: images with a transparent background were invisible in the picker.
