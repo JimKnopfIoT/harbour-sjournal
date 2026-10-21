@@ -83,6 +83,8 @@ reports one. One finger draws, two fingers pan and zoom.
 mb2 -t SailfishOS-5.2.0.17-aarch64 build
 ```
 
+AI assisted development
+
 ## Licence
 
 GPLv3. The vendored potrace tracing core is GPL-2.0-or-later and the vendored
