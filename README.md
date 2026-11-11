@@ -83,7 +83,7 @@ reports one. One finger draws, two fingers pan and zoom.
 mb2 -t SailfishOS-5.2.0.17-aarch64 build
 ```
 
-AI assisted development
+LLM assisted development
 
 ## Licence
 
